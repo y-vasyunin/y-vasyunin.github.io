@@ -2,6 +2,8 @@
 
 The repository for my personal website [yvasyunin.com](https://www.yvasyunin.com), which is hosted on GitHub Pages and powered by the Jekyll static site generator. It offers multilingual content (English, Russian, and Italian) and is continuously evolving as new materials are added.
 
+This repository is intended for personal use and is not open for collaborative work. Suggestions and feedback are welcome, but direct contributions via pull requests are not accepted.
+
 ## Structure
 
 The repository follows the standard structure for a Jekyll-based GitHub Pages site:
@@ -9,11 +11,12 @@ The repository follows the standard structure for a Jekyll-based GitHub Pages si
 - `_data`: Reusable structured data to make the site more modular and maintainable.
 - `_includes`: Reusable components like headers and footers.
 - `_layouts`: HTML templates for the site's layout.
+- `_posts`: Directory for posts written in in Markdown.
 - `_sass`: Reusable Sass (SCSS) partials for styling the site.
 - `assets`: Contains images, stylesheets, and scripts.
-- `collections`: Directory for custom content types (including posts).
 - `pages`: Directory for site pages written in Markdown.
 - `_config.yml`: Configuration file for Jekyll.
+- `Gemfile`: A configuration file specifying necessary Ruby libraries.
 - `index.md`: The homepage of the site.
 
 ## Getting Started Locally
@@ -36,10 +39,6 @@ The repository follows the standard structure for a Jekyll-based GitHub Pages si
    ```
    http://localhost:5000 # note that I changed the default 4000 port
    ```
-
-## Contributions
-
-This repository is intended for personal use and is not open for collaborative work. Suggestions and feedback are welcome, but direct contributions via pull requests are not accepted.
 
 ## License
 

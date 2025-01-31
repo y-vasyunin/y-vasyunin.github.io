@@ -1,0 +1,54 @@
+---
+layout: base
+---
+{% assign lang = site.active_lang %}
+{%- assign date_format = site.date_formats[lang] | default: "%b %-d, %Y" -%}
+
+<div class="home">
+  <!-- <h1 class="page-heading">{{ page.title | escape }}</h1> -->
+
+  {{ content }}
+
+
+  {% if site.paginate %}
+    {% assign posts = paginator.posts %}
+  {% else %}
+    {% assign posts = site.posts %}
+  {% endif %}
+
+
+  {%- if posts.size > 0 -%}
+    {%- if page.list_title -%}
+      <h2 class="post-list-heading">{{ page.list_title }}</h2>
+    {%- endif -%}
+    <ul>
+      {% for post in site.posts %}
+        <li>
+          {{ post.date  | date: date_format }} | <strong><a href="{{ post.url }}">{{ post.title }}</a></strong><br>
+          <!-- <span class="post-excerpt">{{ post.excerpt | strip_html }}...</span> -->
+        </li>
+      {% endfor %}
+      <li>{{ site.blog_invitation[lang] }}</li>
+    </ul>
+
+    {% if site.paginate %}
+      <div class="pager">
+        <ul class="pagination">
+        {%- if paginator.previous_page %}
+          <li><a href="{{ paginator.previous_page_path | relative_url }}" class="previous-page">{{ paginator.previous_page }}</a></li>
+        {%- else %}
+          <li><div class="pager-edge">•</div></li>
+        {%- endif %}
+          <li><div class="current-page">{{ paginator.page }}</div></li>
+        {%- if paginator.next_page %}
+          <li><a href="{{ paginator.next_page_path | relative_url }}" class="next-page">{{ paginator.next_page }}</a></li>
+        {%- else %}
+          <li><div class="pager-edge">•</div></li>
+        {%- endif %}
+        </ul>
+      </div>
+    {%- endif %}
+
+  {%- endif -%}
+
+</div>

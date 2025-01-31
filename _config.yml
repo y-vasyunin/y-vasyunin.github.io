@@ -1,0 +1,68 @@
+title:
+  en: Yaroslav Vasyunin's Site
+  ru: Сайт Ярослава Васюнина
+  it: Il sito di Yaroslav Vasyunin
+
+date_formats:
+  en: "%b %e, %Y" # Sep 1, 2024
+  ru: "%d.%m.%Y"  # 01.09.2024
+  it: "%d/%m/%Y"  # 01/09/2024
+
+description:
+  en: A personal site of Yaroslav Vasyunin
+  ru: Личный сайт Ярослава Васюнина
+  it: Un sito personale di Yaroslav Vasyunin
+
+domain: yvasyunin.com
+url: https://yvasyunin.com
+
+github_username: y-vasyunin
+email: 5k9lgao5r@mozmail.com
+
+# Build settings
+theme: minima
+plugins:
+  - jekyll-feed
+  - jekyll-polyglot
+  - jekyll-sitemap
+  - jekyll-target-blank
+
+port: 5000 # Local server
+
+# Polyglot language plugin settings
+languages: ["en", "ru", "it"]
+default_lang: "en"
+exclude_from_localization: ["assets", "javascript", "images", "css", "public"]
+parallel_localization: true
+
+google_analytics: true # Google Analytics
+
+# Site licensing
+copyright:
+  en: "Copyright"
+  it: "Copyright"
+  ru: "Авторские права"
+
+global_license:
+  en: "Unless otherwise noted, all blog posts, photos, graphics, code snippets and other media are published under a [CC BY 4.0](https://creativecommons.org/licenses/by/4.0) license."
+  ru: "Если не указано иное, все записи в блоге, фотографии, графика, фрагменты кода и другие материалы публикуются по лицензии [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/deed.ru)."
+  it: "A meno che non sia specificato diversamente, tutti i post del blog, le foto, le grafiche, i frammenti di codice e altri media sono pubblicati sotto licenza [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/deed.it)."
+
+# Navigation
+page404:
+  title:
+    en: Page not found ☹️
+    ru: Страница не найдена ☹️
+    it: Pagina non trovata ☹️
+  info:
+    en: The requested page could not be found.
+    ru: Запрашиваемая страница не найдена.
+    it: La pagina richiesta non è stata trovata.
+
+# Homepage
+# A masthead graphic at the top of a the homepage:
+masthead: /assets/images/yaroslav.png
+blog_invitation:
+  en: see more articles in the <a href="/blog">Blog</a>
+  it: vedi più articoli nel <a href="/blog">Blog</a>
+  ru: увидеть больше статей в <a href="/blog">Блоге</a>

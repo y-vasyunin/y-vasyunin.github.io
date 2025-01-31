@@ -1,0 +1,14 @@
+# Top menu order
+main:
+  en:
+    - pages/blog-en.md
+    - pages/pubs-en.md
+    - pages/about-en.md
+  ru:
+    - pages/blog-ru.md
+    - pages/pubs-ru.md
+    - pages/about-ru.md
+  it:
+    - pages/blog-it.md
+    - pages/pubs-it.md
+    - pages/about-it.md

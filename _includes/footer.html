@@ -1,0 +1,13 @@
+<footer class="site-footer h-card">
+    <data class="u-url" href="{{ "/" | relative_url }}"></data>
+
+    <div class="wrapper">
+
+      <div class="footer-copyright">
+        <p>{{ site.copyright[lang] | escape }} © {{ site.time | date: '%Y' }} {{ site.title[lang] | escape }}</p>
+        {{ site.global_license[lang] | markdownify}}
+      </div>
+
+    </div>
+
+  </footer>

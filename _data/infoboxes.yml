@@ -1,0 +1,14 @@
+under_development:
+  en: "**Under development**: This page is frequently updated. Stay tuned for improvements and new content."
+  it: "**In fase di sviluppo**: Questa pagina viene aggiornata frequentemente. Resta sintonizzato per miglioramenti e nuovi contenuti."
+  ru: "**В разработке**: Эта страница часто обновляется. Ожидайте улучшений и нового контента."
+
+coming_soon:
+  en: "**Coming soon**: This page is currently empty. Please check back later for new content!"
+  it: "**In arrivo**: Questa pagina è attualmente vuota. Tornate a visitarla più tardi per trovare nuovi contenuti!"
+  ru: "**Скоро**: Эта страница пока пуста. Пожалуйста, загляните позже, чтобы увидеть новое содержимое!"
+
+under_maintenance:
+  en: "**Under maintenance**: This page is currently undergoing routine maintenance. Some features may be temporarily unavailable."
+  ru: "**На обслуживании**: Эта страница в данный момент находится на плановом обслуживании. Некоторые функции могут быть временно недоступны."
+  it: "**In manutenzione**: Questa pagina è attualmente in fase di manutenzione. Alcune funzionalità potrebbero essere temporaneamente non disponibili."

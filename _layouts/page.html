@@ -1,0 +1,9 @@
+---
+layout: base
+---
+{% assign lang = site.active_lang %}
+{%- assign date_format = site.date_formats[lang] | default: "%b %-d, %Y" -%}
+
+<h1 class="post-title">{{ page.title | escape }}</h1>
+
+{{ content }}

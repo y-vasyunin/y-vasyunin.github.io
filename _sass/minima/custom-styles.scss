@@ -1,0 +1,260 @@
+// Site Sections and Layout
+
+main p {
+  text-align: justify;
+}
+
+.site-masthead {  // logo
+  display: block;
+  max-width: 70px;
+  margin-right: auto;
+  padding-top: $spacing-unit / 1.5;
+  padding-bottom: 0;
+}
+
+.site-info {
+  display: flex;
+  flex-direction: column; /* Stacks title and description vertically */
+  margin-left: 20px; /* Adds space between the image and text */
+  flex: 1; /* Ensures the text takes up the remaining horizontal space */
+}
+
+.site-title {
+  font-size: 1.8em; /* Adjusts the size for prominence */
+  font-weight: bold;
+  margin: 0;
+}
+
+.site-description {
+  font-size: 1em; /* Slightly smaller for the description */
+  color: $brand-color;
+  margin: 0;
+  line-height: $spacing-unit / 1.5;
+}
+
+// blockquote {
+
+// }
+
+.title-wrapper {
+  display: flex; /* Ensures elements are laid out horizontally */
+  align-items: center; /* Aligns the content vertically centered */
+}
+
+.site-header {
+  border-top: 1px solid $border-color-01;  // make the default line thinner
+}
+
+.footer-copyright {
+  // @include relative-font-size(0.9375);
+  color: $brand-color;
+  font-size: small;
+}
+
+.footer-copyright p {
+  margin-bottom: 6px;
+}
+
+/* Image Captions */
+
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+img + em {
+  font-size: smaller;
+  color: $brand-color;
+  display: block;
+  text-align: center;
+ }
+
+/* Text on image */
+
+.image-container {
+  position: relative;
+  width: 100%; /* задайте нужную ширину */
+  height: auto; /* высота изображения */
+  // padding-bottom: 10px;
+}
+
+.image-container img {
+  width: 100%; /* растягиваем изображение на всю ширину контейнера */
+  height: auto; /* сохраняем пропорции изображения */
+  display: block; /* убираем пробелы под изображением */
+}
+
+.text-overlay {
+  position: absolute;
+  top: 50%; /* центрируем текст по вертикали */
+  left: 50%; /* центрируем текст по горизонтали */
+  transform: translate(-50%, -50%); /* точное центрирование текста */
+  color: white; /* цвет текста */
+  font-size: 24px; /* базовый размер шрифта */
+  text-align: center; /* выравнивание текста */
+  text-shadow: #000 0 0 5px;
+}
+
+/* Responsive font size for smaller screens */
+@media (max-width: 768px) {
+  .text-overlay {
+    font-size: 18px; /* уменьшение размера шрифта для планшетов */
+  }
+}
+
+@media (max-width: 480px) {
+  .text-overlay {
+    font-size: 14px; /* уменьшение размера шрифта для смартфонов */
+  }
+}
+
+// Code Blocks
+
+code {
+  color: $code-color;
+  font-size: smaller;
+}
+
+
+
+// Info Boxes
+
+.info-box {
+  overflow: hidden;
+  border-left: 4px solid;
+  padding: 12px;
+  padding-bottom: 0;
+  margin-bottom: 30px;
+}
+
+.blue-box {
+  background-color: #f0f7fb;
+  border-left-color: #3498db;
+  color: $brand-color;
+}
+
+.yellow-box {
+  background-color: #fefbea;
+  border-left-color: #f0c50e;
+  color: $brand-color;
+}
+
+.green-box {
+  background-color: #e7f6f0;
+  border-left-color: #3ec27d;
+  color: $brand-color;
+}
+
+.red-box {
+  background-color: #f9e7e5;
+  border-left-color: #de4e45;
+  color: $brand-color;
+}
+
+// Blog
+.post-excerpt {
+  font-style: italic;
+  font-size: smaller;
+}
+
+// Worlds
+
+.worlds-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* Space between each world item */
+}
+
+.world-item {
+  display: flex;
+  align-items: flex-start; /* Align the items at the start of the container */
+  margin-bottom: 30px; /* Space between image and text */
+}
+
+.world-thumbnail img {
+  max-width: 150px;
+  // border-radius: 50%;
+  object-fit: cover; /* Ensures the image fits nicely within the 150x150 box */
+  margin-right: 10px; /* Space between image and text */
+}
+
+.world-info {
+  flex-grow: 1; /* Ensure the text takes up the remaining space */
+}
+
+.world-info h2 {
+  margin: 0; /* Remove the margin for better alignment */
+}
+
+.world-info p {
+  margin-top: 10px; /* Space between the title and description */
+}
+
+// Artifacts
+
+.artifact-list {
+  // padding-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* Space between each world item */
+}
+
+.artifact-item {
+  display: flex;
+  align-items: flex-start; /* Align the items at the start of the container */
+  margin-bottom: 30px; /* Space between image and text */
+}
+
+.artifact-thumbnail img {
+  max-width: 150px;
+  // border-radius: 50%;
+  object-fit: cover; /* Ensures the image fits nicely within the 150x150 box */
+  margin-right: 10px; /* Space between image and text */
+}
+
+.artifact-info {
+  flex-grow: 1; /* Ensure the text takes up the remaining space */
+}
+
+.artifact-info h2 {
+  margin: 0; /* Remove the margin for better alignment */
+}
+
+.artifact-info p {
+  margin-top: 10px; /* Space between the title and description */
+}
+
+// Cartography
+
+.map-content {
+  padding: 0;
+  flex: auto;
+}
+
+// Buttons
+
+.download-btn {
+  display: inline-block;
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: bold;
+  text-decoration: none;
+  text-align: center;
+  color: white;
+  background-color: $link-base-color;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.download-btn:hover {
+  background-color: #5c74ff;
+  transform: scale(1.01);
+}
+
+.download-btn:active {
+  background-color: #5c74ff;
+  transform: scale(0.99);
+}

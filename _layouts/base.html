@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: 'en' }}">
+
+  {%- include head.html -%}
+
+  <body>
+    {%- include header.html -%}
+
+    <main class="page-content" aria-label="Content">
+      <div class="wrapper">
+
+        <!-- Language-dependent substitutions -->
+        {% if lang == "ru" or lang == "en" %}
+          {{ content | replace: " - ", " — " }}
+        {% else %}
+            {{ content }}
+        {% endif %}
+
+        <!-- Custom license block -->
+        {% if page.license %}
+          {% assign license_key = page.license %}
+          {% assign license_info = site.data.licenses[license_key][lang] | markdownify %}
+        {% endif %}
+
+        {% if license_info %}
+          <div class="info-box blue-box">{{ license_info }}</div>
+        {% endif %}
+
+      </div>
+    {%- include footer.html -%}
+    </main>
+  </body>
+
+</html>

@@ -1,0 +1,16 @@
+---
+layout: base
+---
+{% assign lang = site.active_lang %}
+{%- assign date_format = site.date_formats[lang] | default: "%b %-d, %Y" -%}
+
+<h1 class="page-heading">{{ page.title | escape }}</h1>
+
+<ul>
+    {% for post in site.posts %}
+      <li>
+        {{ post.date  | date: date_format }} | <strong><a href="{{ post.url }}">{{ post.title }}</a></strong><br>
+        <span class="post-excerpt">{{ post.excerpt | strip_html }}...</span>
+      </li>
+    {% endfor %}
+</ul>
